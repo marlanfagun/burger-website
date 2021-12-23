@@ -23,4 +23,10 @@ window.onscroll = () => {
   searchForm.classList.remove('active')
   menuBtn.classList.remove('fa-times')
   navbar.classList.remove('active')
+
+  if (window.scrollY > 60) {
+    document.querySelector('#scroll-top').classList.add('active')
+  } else {
+    document.querySelector('#scroll-top').classList.remove('active')
+  }
 }

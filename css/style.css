@@ -580,6 +580,25 @@ section {
   color: #eacf4f;
 }
 
+#scroll-top {
+  position: fixed;
+  top: -120%;
+  right: 10rem;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  background: #eacf4f;
+  color: #000;
+  -webkit-clip-path: circle();
+          clip-path: circle();
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  z-index: 1000;
+}
+
+#scroll-top.active {
+  top: calc(100% - 12rem);
+}
+
 @media (max-width: 1200px) {
   .header {
     padding: 3rem;
@@ -627,11 +646,18 @@ section {
   .header .navbar .space {
     display: none;
   }
+  #scroll-top {
+    right: 2rem;
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .home .content h3 {
     font-size: 2.5rem;
+  }
+  #scroll-top {
+    display: none;
   }
 }
 

@@ -517,6 +517,23 @@ section {
   }
 }
 
+#scroll-top {
+  position: fixed;
+  top: -120%;
+  right: 10rem;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  background: $yellow;
+  color: $black;
+  clip-path: circle();
+  transition: 1s linear;
+  z-index: 1000;
+
+  &.active {
+    top: calc(100% - 12rem);
+  }
+}
+
 // media queries
 
 @media (max-width: 1200px) {
@@ -569,11 +586,20 @@ section {
       }
     }
   }
+
+  #scroll-top {
+    right: 2rem;
+    padding: 0.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .home .content h3 {
     font-size: 2.5rem;
+  }
+
+  #scroll-top {
+    display: none;
   }
 }
 
